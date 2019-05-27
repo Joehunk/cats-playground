@@ -8,6 +8,7 @@ import scala.language.higherKinds
 case class ListT[F[_], A](value: F[List[A]])
 
 object ListT {
+  // The "?" notation below requires the "kind projector" compiler plugin. See build.sbt
   implicit def listTransformerMonad[F[_]](implicit F: Monad[F]) = new Monad[ListT[F, ?]] {
     override def pure[A](x: A): ListT[F, A] = ListT(F.pure(List(x)))
 
