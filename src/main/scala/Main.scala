@@ -1,6 +1,7 @@
 import cats.data.OptionT
 import cats.effect.IO
-import com.kukaatx.cats.playground.{AwesomeFutureImpl, MinMaxMonoidMadness, SomeReaderMonadStuff, SomeStateMonadStuff, TheMainTypeClass}
+import com.kukaatx.cats.playground.{AwesomeFutureImpl, MinMaxMonoidMadness, SomeReaderMonadStuff, SomeStateMonadStuff, TheMainTypeClass, TraversingFuturesOfThings}
+import scala.concurrent.ExecutionContext.Implicits.global
 
 object Main {
   def taglessFinal(): Unit = {
@@ -18,6 +19,6 @@ object Main {
   }
 
   def main(argv: Array[String]): Unit = {
-    MinMaxMonoidMadness.test()
+    TraversingFuturesOfThings.doSomeTraversing()
   }
 }

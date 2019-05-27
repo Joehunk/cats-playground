@@ -2,6 +2,7 @@ package com.kukaatx.cats.playground
 import cats._
 import cats.effect.LiftIO
 
+import scala.collection.immutable.TreeMap
 import scala.language.higherKinds
 
 trait AwesomeTrait {
