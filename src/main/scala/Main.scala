@@ -1,6 +1,7 @@
 import cats.data.OptionT
 import cats.effect.IO
-import com.kukaatx.cats.playground.{AwesomeFutureImpl, MinMaxMonoidMadness, SomeReaderMonadStuff, SomeStateMonadStuff, TheMainTypeClass, TraversingFuturesOfThings}
+import com.kukaatx.cats.playground.{AwesomeFutureImpl, MinMaxMonoidMadness, PurposeTyping, SomeReaderMonadStuff, SomeStateMonadStuff, TheMainTypeClass, TraversingFuturesOfThings}
+
 import scala.concurrent.ExecutionContext.Implicits.global
 
 object Main {
@@ -19,6 +20,6 @@ object Main {
   }
 
   def main(argv: Array[String]): Unit = {
-    TraversingFuturesOfThings.doSomeTraversing()
+    PurposeTyping.doStuff()
   }
 }
